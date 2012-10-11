@@ -27,5 +27,5 @@ if (isset($argv[4])) {
 	logme($message);
 	
 	exec("git add ".$task);
-	exec("git commit -m '\"".$task."\" task finished' ".$task);
+	exec("git commit -m '\"".$task."\" task ".($return_var!=0?"failed":"finished")."' ".$task);
 }

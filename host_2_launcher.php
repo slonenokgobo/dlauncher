@@ -15,10 +15,10 @@ foreach($hosts as $line) {
 		$host = $arr[0];
 		$num = intval($arr[1]);
 		for ($i=0; $i<$num; $i++) {
-			echo "\"$arr[0]$i\" => \"ssh $arr[0] \$opt \",\n";
+			echo "\"$arr[0]$i\" => \"ssh \$opt $arr[0] \",\n";
 		}
 	} else {
-		echo "\"$arr[0]\" => \"ssh $arr[0] \$opt \",\n";
+		echo "\"$arr[0]\" => \"ssh \$opt $arr[0] \",\n";
 	}
 }
 

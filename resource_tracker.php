@@ -24,7 +24,7 @@ function execute_command($task_name, $command) {
 	$command = trim($command);
 
 	if ($launcher) {
-		logme("Found free launcher for $task_name");
+		logme("Found free launcher ".$launcher["id"]." for $task_name");
 		logme("php ".dirname(__FILE__)."/launcher.php ".$launcher["id"]." \"".$launcher["command"]."\" \"".$command."\" $task_name 1>> $task_name 2>&1 &");
 		exec("php ".dirname(__FILE__)."/launcher.php ".$launcher["id"]." \"".$launcher["command"]."\" \"".$command."\" $task_name 1>> $task_name 2>&1 &");
 	}
